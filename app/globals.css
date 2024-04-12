@@ -64,3 +64,19 @@
 .offer-item {
   flex: 1 0 400px;
 }
+
+.calculator-block {
+  box-shadow: 0px 7px 22.2px 0px #00000096;
+}
+
+.extra-dark-back {
+  background: #262626;
+}
+
+.light-back {
+  background: #fbedc3;
+}
+
+.pos-rel {
+  position: relative !important;
+}
