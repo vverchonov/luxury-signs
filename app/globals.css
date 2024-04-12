@@ -2,32 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.main-back {
+  background: #ccb363;
+}
+
+.main-text {
+  color: #ccb363;
+}
+
+.dark-text {
+  color: #1e3226;
+}
+
+.h1-text {
+  margin-top: calc((100vh - 72px) * 0.23);
+}
+
+.dark-back {
+  background-color: #1e3226;
+}
+
+.grey-text {
+  color: #6f7d7b;
+}
+
+.welcome-block {
+  box-shadow: 0px 7px 22.2px 0px #00000096;
+
+  min-height: calc(100vh - 72px);
+  background-image: linear-gradient(
+    to top,
+    #1e3226,
+    #1e3226 70%,
+    transparent 70%,
+    transparent 100%
+  );
+}
+
+.top-margin {
+  margin-top: 72px;
+}
+
+.offer-img {
+  border-radius: 10%;
+  width: 100%;
+  max-width: auto;
+  height: auto;
+}
+
+.flex-container {
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+
+.offer-item {
+  flex: 1 0 400px;
 }
