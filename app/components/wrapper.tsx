@@ -1,7 +1,11 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 
-export const Wrapper = ({ children }) => {
+type Props = {
+  children: any;
+};
+
+export const Wrapper = (props: Props) => {
   return (
     <AnimatePresence>
       <motion.div
@@ -11,7 +15,7 @@ export const Wrapper = ({ children }) => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        {children}
+        {props.children}
       </motion.div>
     </AnimatePresence>
   );
