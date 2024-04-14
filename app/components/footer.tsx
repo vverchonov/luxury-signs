@@ -4,23 +4,27 @@ export const Footer = () => {
   return (
     <div className="flex w-full extra-dark-back">
       <div className="flex flex-col w-1/2 p-24">
-        <p className="text-white mb-4 text-xl">OUR ADDRESS:</p>
-        <p className="text-white mb-2 text-lg">
+        <p className="text-white mb-4 text-2xl font-na">OUR ADDRESS:</p>
+        <p className="text-white mb-2 text-xl font-na">
           Toronto: 2789 Islington eve w. (back of the building)
         </p>
         <p className="text-white mb-8 text-lg">
           London: 125 King St ( back of the building)
         </p>
 
-        <p className="text-white mb-4 text-xl">CONTACT US:</p>
-        <p className="text-white mb-2 text-lg">email@gmail.com</p>
-        <p className="text-white mb-2 text-lg">+1 226 789 23 34</p>
-        <p className="text-white mb-8 text-lg">+1 226 789 23 34</p>
+        <p className="text-white mb-4 text-2xl font-na">CONTACT US:</p>
+        <p className="text-white mb-2 text-xl font-na">email@gmail.com</p>
+        <p className="text-white mb-2 text-xl font-na">
+          +1 226 789 23 34 - Vlad
+        </p>
+        <p className="text-white mb-8 text-xl font-na">
+          +1 226 789 23 34 - Rami
+        </p>
 
         <div className="mt-auto flex flex-row gap-10 align-center">
           <Link href={""}>
             <svg
-              className="w-12 h-12"
+              className="w-8 h-8"
               xmlns="http://www.w3.org/2000/svg"
               fill="white"
               viewBox="0 0 448 512"
@@ -30,7 +34,7 @@ export const Footer = () => {
           </Link>
           <Link href={""}>
             <svg
-              className="w-10 h-10"
+              className="w-6 h-6"
               fill="white"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
@@ -40,7 +44,7 @@ export const Footer = () => {
           </Link>
           <Link href={""}>
             <svg
-              className="w-10 h-10"
+              className="w-6 h-6"
               fill="white"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"

@@ -57,9 +57,9 @@ export const Step3 = () => {
       />
       <button
         type="button"
-        className="ms-auto w-fit text-white main-back text-2xl focus:ring-4 focus:outline-none focus:ring-white font-medium px-4 py-2 text-center transform transition duration-500 hover:scale-110"
+        className="ms-auto w-fit font-na text-2xl font-semibold mt-2 text-white main-back text-2xl focus:ring-4 focus:outline-none focus:ring-white font-medium px-4 py-2 text-center transform transition duration-500 hover:scale-110"
       >
-        SUBMIT
+        GET ESTIMATE
       </button>
     </>
   );

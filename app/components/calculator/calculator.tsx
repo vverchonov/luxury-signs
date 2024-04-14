@@ -11,7 +11,7 @@ export const Calculator = () => {
   const [isLogo, setIsLogo] = useState(false);
   const [name, setName] = useState("");
 
-  const [width, setWidth] = useState(10);
+  const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(10);
 
   const getTotal = () => {
@@ -21,7 +21,7 @@ export const Calculator = () => {
     }
 
     if (selectedType === TYPE2) {
-      return width * 101 + " CAD";
+      if (width !== undefined) return width * 101 + " CAD";
     }
 
     return "We need more details from you. Please submit the form or contact us to get your estimate";
@@ -52,11 +52,23 @@ export const Calculator = () => {
           <Step3 />
         </div>
       </div>
-      <div className="md:w-1/2 w-full flex justify-center items-center">
-        <div className="flex flex-col gap-4">
-          <p className="text-white text-7xl text-bold">YOUR TOTAL:</p>
-          <p className="text-white text-5xl text-bold">{getTotal()}</p>
-        </div>
+      <div className="md:w-1/2 p-24">
+        <h2 className="text-5xl text-white mb-12 uppercase font-semibold">
+          Get your estimate in one minute
+        </h2>
+        <p className="text-2xl font-na text-white font-light mb-8">
+          In publishing and graphic design, Lorem ipsum is a placeholder text
+          commonly used to demonstrate the visual form of a document or a
+          typeface without relying on meaningful content. In publishing and
+          graphic design, Lorem ipsum is a placeholder text commonly used to
+          demonstrate the visua
+        </p>
+        <p className="text-white mb-2  text-center font-na text-2xl">
+          +1 226 789 23 34 - Vlad
+        </p>
+        <p className="text-white  text-center font-na text-2xl">
+          +1 226 789 23 34 - Rami
+        </p>
       </div>
     </div>
   );

@@ -77,26 +77,6 @@ export const Step2 = (props: Props) => {
         <div className="flex flex-row gap-4 text-center">
           <div className="flex flex-col w-1/2 text-start">
             <label
-              htmlFor="height"
-              className="block mb-2 text-xl font-medium text-gray-900 dark:text-white"
-            >
-              Height:
-            </label>
-            <input
-              type="number"
-              id="height"
-              value={props.height}
-              onChange={(e: any) => {
-                props.setHeight(e.target.value);
-              }}
-              className="bg-white border border-gray-300 mb-4 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-              placeholder="10"
-              required
-            />
-          </div>
-          {/* <p className="text-xl text-white">X</p> */}
-          <div className="flex flex-col w-1/2 text-start">
-            <label
               htmlFor="width"
               className="block mb-2 text-xl font-medium text-gray-900 dark:text-white"
             >
@@ -110,7 +90,7 @@ export const Step2 = (props: Props) => {
                 props.setWidth(e.target.value);
               }}
               className="bg-white border border-gray-300 mb-4 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-              placeholder="15"
+              placeholder="ft"
               required
             />
           </div>
