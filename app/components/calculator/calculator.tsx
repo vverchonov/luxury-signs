@@ -20,6 +20,10 @@ export const Calculator = () => {
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(10);
 
+  const onSuccessSubmit = () => {
+    setClientName("");
+  };
+
   const getTotal = () => {
     if (selectedType === TYPE1) {
       const finalName = name.replace(/ /g, "");
