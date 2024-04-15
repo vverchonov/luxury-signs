@@ -15,6 +15,10 @@ type Props = {
 };
 
 export const SubmitButton = (props: Props) => {
+  console.log(
+    " NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY",
+    process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID
+  );
   const sendEmail = (e: any) => {
     e.preventDefault();
     emailjs
