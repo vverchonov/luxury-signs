@@ -2,7 +2,7 @@ import { Wrapper } from "../wrapper";
 
 export const WelcomeBlock = () => {
   return (
-    <div className="flex flex-col top-margin welcome-block w-full text-center">
+    <div className="flex flex-col top-margin welcome-block w-full text-center items-center">
       <Wrapper>
         <h1 className="text-9xl main-text h1-text font-cor font-semibold">
           CUSTOM SIGNS

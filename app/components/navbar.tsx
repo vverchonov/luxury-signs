@@ -4,8 +4,8 @@ import Link from "next/link";
 export const Navbar = () => {
   return (
     <nav className="main-back fixed w-full z-20 top-0 start-0">
-      <div className="flex flex-wrap items-center justify-between p-4">
-        <div className="flex flex-row flex-grow space-between">
+      <div className="flex flex-wrap items-center justify-between p-4 max-w-screen-2xl m-auto">
+        <div className="flex flex-row space-between">
           <a href="/" className="flex items-center me-8">
             <Image
               src={"/assets/png/logo.png"}
@@ -47,7 +47,7 @@ export const Navbar = () => {
             </Link>
           </div>
         </div>
-        <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse flex-grow justify-center">
+        <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse justify-center">
           <button
             type="button"
             className="text-white text-lg font-semibold focus:ring-4 font-na focus:outline-none focus:ring-white font-medium px-4 py-2 text-center transform transition duration-500 hover:scale-110 nav-button-sell"
