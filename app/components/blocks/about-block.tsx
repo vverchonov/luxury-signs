@@ -8,11 +8,11 @@ export const AboutUsBlock = () => {
         id={"about-block"}
         className="light-back w-full m-h-screen flex flex-wrap"
       >
-        <div className="md:w-1/2 p-4 md:p-24">
+        <div className="md:w-1/2 p-2 md:p-24">
           <p className="grey-text font-na text-8xl text-right mb-8 font-bold">
             WHO WE ARE
           </p>
-          <p className="grey-text text-xl font-na text-left md:text-right md:pe-16">
+          <p className="grey-text text-xl p-2 font-na text-left md:text-right md:pe-16">
             In publishing and graphic design, Lorem ipsum is a placeholder text
             commonly used to demonstrate the visual form of a document or a
             typeface without relying on meaningful content. In publishing and
@@ -41,11 +41,11 @@ export const AboutUsBlock = () => {
             src={"/assets/png/picture-2.png"}
           />
         </div>
-        <div className="md:w-1/2 p-4 md:p-24">
+        <div className="md:w-1/2 p-2 md:p-24">
           <p className="grey-text font-na text-8xl text-left mb-8 font-bold">
             WHY to INVEST IN SIGNAGE
           </p>
-          <p className="grey-text text-xl font-na text-left md:text-right md:pe-16">
+          <p className="grey-text text-xl p-2 font-na text-left md:text-right md:pe-16">
             In publishing and graphic design, Lorem ipsum is a placeholder text
             commonly used to demonstrate the visual form of a document or a
             typeface without relying on meaningful content. In publishing and

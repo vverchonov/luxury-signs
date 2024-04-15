@@ -66,7 +66,7 @@ export const Navbar = () => {
           <button
             data-collapse-toggle="navbar-sticky"
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-white dark:text-white"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover: focus:outline-none focus:ring-2 focus:ring-white dark:text-white"
             aria-controls="navbar-sticky"
             aria-expanded="false"
           >

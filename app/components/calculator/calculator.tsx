@@ -4,12 +4,18 @@ import { use, useState } from "react";
 import { Step1, TYPE1, TYPE2 } from "./step1";
 import { Step2 } from "./step2";
 import { Step3 } from "./step3";
+import { SubmitButton } from "./submit-button";
 
 export const Calculator = () => {
   const [selectedType, setSelectedType] = useState(null);
   const [isLit, setIsLit] = useState(false);
   const [isLogo, setIsLogo] = useState(false);
   const [name, setName] = useState("");
+
+  const [clientName, setClientName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [msg, setMsg] = useState("");
 
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(10);
@@ -75,7 +81,26 @@ export const Calculator = () => {
           />
         </div>
         <div>
-          <Step3 />
+          <Step3
+            clientName={clientName}
+            email={email}
+            phone={phone}
+            setClientName={setClientName}
+            setEmail={setEmail}
+            setPhone={setPhone}
+          />
+          <SubmitButton
+            estimate={getTotal()}
+            email={email}
+            isLit={isLit}
+            isLogo={isLogo}
+            msg={msg}
+            name={clientName}
+            phone={phone}
+            signName={name}
+            type={selectedType}
+            width={width}
+          />
         </div>
       </div>
     </div>
