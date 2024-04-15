@@ -4,9 +4,12 @@ import { Wrapper } from "../wrapper";
 export const WeOfferBlock = () => {
   return (
     <Wrapper>
-      <section className="w-full ps-48 pe-48 pb-24 pt-20">
+      <section
+        id={"products-block"}
+        className="w-full p-4 md:ps-48 md:pe-48 md:pb-24 md:pt-20"
+      >
         <div className="flex w-full flex-col">
-          <h2 className="ms-auto text-140xl grey-text mb-12 font-na font-bold">
+          <h2 className="ms-auto text-8xl grey-text mb-4 md:mb-12 font-na font-bold">
             WE OFFER
           </h2>
         </div>

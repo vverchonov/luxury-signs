@@ -28,8 +28,34 @@ export const Calculator = () => {
   };
 
   return (
-    <div className="w-100 flex flex-wrap">
-      <div className="lg:w-1/2 w-full">
+    <div className="w-100 flex flex-col md:flex-row">
+      <div className="md:w-1/2 pt-8 pb-8 md:p-24">
+        <h2 className="text-5xl text-white mb-12 uppercase font-semibold">
+          Get your estimate in one minute
+        </h2>
+        <p className="text-2xl font-na text-white font-light mb-8">
+          In publishing and graphic design, Lorem ipsum is a placeholder text
+          commonly used to demonstrate the visual form of a document or a
+          typeface without relying on meaningful content. In publishing and
+          graphic design, Lorem ipsum is a placeholder text commonly used to
+          demonstrate the visua
+        </p>
+        <div className="flex flex-row md:flex-col">
+          <a
+            href="tel:+12263789562"
+            className="text-white mb-2 md:text-center font-na text-2xl"
+          >
+            +1(226)378-9562 - Vlad
+          </a>
+          <a
+            href="tel:+12263789562"
+            className="text-white md:text-center font-na text-2xl"
+          >
+            +1(226)378-9562 - Rami
+          </a>
+        </div>
+      </div>
+      <div className="md:w-1/2 w-full p-4">
         <div className="mb-4">
           <Step1 selectedType={selectedType} onSelect={setSelectedType} />
         </div>
@@ -51,24 +77,6 @@ export const Calculator = () => {
         <div>
           <Step3 />
         </div>
-      </div>
-      <div className="md:w-1/2 p-24">
-        <h2 className="text-5xl text-white mb-12 uppercase font-semibold">
-          Get your estimate in one minute
-        </h2>
-        <p className="text-2xl font-na text-white font-light mb-8">
-          In publishing and graphic design, Lorem ipsum is a placeholder text
-          commonly used to demonstrate the visual form of a document or a
-          typeface without relying on meaningful content. In publishing and
-          graphic design, Lorem ipsum is a placeholder text commonly used to
-          demonstrate the visua
-        </p>
-        <p className="text-white mb-2  text-center font-na text-2xl">
-          +1 226 789 23 34 - Vlad
-        </p>
-        <p className="text-white  text-center font-na text-2xl">
-          +1 226 789 23 34 - Rami
-        </p>
       </div>
     </div>
   );

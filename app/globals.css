@@ -8,6 +8,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .main-back {
   background: #ccb363;
 }
@@ -60,8 +64,6 @@
 
 .nav-items {
   letter-spacing: 5px;
-  font-weight: 600;
-  line-height: 35px;
 }
 
 .nav-button-sell {
@@ -183,4 +185,18 @@
   100% {
     transform: rotate(0deg);
   }
+}
+
+@media only screen and (max-width: 767px) {
+  /* WELCOME BLOCK */
+  .h1-text {
+    margin-top: calc((100vh - 72px) * 0.25);
+    font-size: 4.5rem; /* 60px */
+  }
+
+  .secondary-text {
+    font-size: 3rem;
+  }
+
+  /* CONTACT US FORM  */
 }

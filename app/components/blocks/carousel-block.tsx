@@ -10,10 +10,10 @@ export const CarouselBlock = () => {
     Autoplay({ playOnInit: true, delay: 3000 }),
   ]);
   return (
-    <section className="w-full min-h-96">
-      <div className="embla min-h-96" ref={emblaRef}>
+    <section id={"carousel-block"} className="w-full min-h-fit md:min-h-96">
+      <div className="embla min-h-fit md:min-h-96" ref={emblaRef}>
         {" "}
-        <div className="embla__container min-h-96">
+        <div className="embla__container min-h-fit md:min-h-96">
           {" "}
           <div className="embla__slide" key={1}>
             <img
