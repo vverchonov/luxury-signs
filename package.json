@@ -13,6 +13,7 @@
     "@emailjs/nodejs": "^2.2.0",
     "embla-carousel-autoplay": "^8.0.2",
     "embla-carousel-react": "^8.0.2",
+    "flowbite-react": "^0.8.0",
     "framer-motion": "^11.0.28",
     "next": "14.1.4",
     "react": "^18",

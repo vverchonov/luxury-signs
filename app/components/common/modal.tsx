@@ -4,7 +4,6 @@ type Props = {
 };
 
 export const Modal = (props: Props) => {
-  console.log("isOpen = ", props.isOpen);
   return (
     <>
       {props.isOpen ? (

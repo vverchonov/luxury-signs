@@ -217,6 +217,10 @@ html {
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
+label {
+  color: white !important;
+}
+
 /* Modal Content */
 .modal-content {
   background-color: #fefefe;

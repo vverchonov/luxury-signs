@@ -88,7 +88,7 @@ export const Calculator = () => {
 
   return (
     <div className="w-100 flex flex-col md:flex-row">
-      <div className="md:w-1/2 pt-8 pb-8 md:p-24">
+      <div className="md:w-1/2 pt-8 pb-8 md:p-12 lg:p-30">
         <h2 className="text-5xl text-white mb-12 uppercase font-semibold">
           Get your estimate in one minute
         </h2>
@@ -102,19 +102,22 @@ export const Calculator = () => {
         <div className="flex flex-row md:flex-col">
           <a
             href="tel:+12263789562"
-            className="text-white mb-2 md:text-center font-na text-2xl"
+            className="text-white mb-2 me-4 md:text-center font-na text-2xl"
           >
-            +1(226)378-9562 - Vlad
+            +1(226)378-9562 Vlad
           </a>
           <a
             href="tel:+12263789562"
             className="text-white md:text-center font-na text-2xl"
           >
-            +1(226)378-9562 - Rami
+            +1(226)378-9562 Rami
           </a>
         </div>
       </div>
-      <form onSubmit={sendEmail} className="md:w-1/2 w-full p-4">
+      <form
+        onSubmit={sendEmail}
+        className="md:w-1/2 w-full p-4 flex flex-col justify-center"
+      >
         <div className="mb-4">
           <Step1 selectedType={selectedType} onSelect={setSelectedType} />
         </div>

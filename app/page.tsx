@@ -1,5 +1,3 @@
-"use client";
-import Image from "next/image";
 import { WelcomeBlock } from "./components/blocks/welcome-block";
 import { WeOfferBlock } from "./components/blocks/we-offer/we-offer-block";
 import { CalculatorBlock } from "./components/blocks/calculator/calculator-block";

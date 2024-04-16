@@ -74,7 +74,7 @@ export const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="w-screen md:w-1/2">
+        <div className=" md:w-1/2">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2918.6938180454063!2d-81.24913232321578!3d42.984722995407964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882ef30a1eb7985f%3A0x40105a01993e7962!2sLuxury%20design%20signs!5e0!3m2!1sen!2sca!4v1712889992976!5m2!1sen!2sca"
             className="w-full md:h-full h-96"
