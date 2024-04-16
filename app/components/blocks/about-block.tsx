@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Wrapper } from "../wrapper";
+import { Wrapper } from "../common/wrapper";
 
 export const AboutUsBlock = () => {
   return (

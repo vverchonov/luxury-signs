@@ -1,16 +1,23 @@
 "use client";
 
 import { use, useState } from "react";
-import { Step1, TYPE1, TYPE2 } from "./step1";
-import { Step2 } from "./step2";
-import { Step3 } from "./step3";
+import emailjs from "@emailjs/nodejs";
+import { Step1, TYPE1, TYPE2 } from "../steps/step1";
+import { Step2 } from "../steps/step2";
+import { Step3 } from "../steps/step3";
 import { SubmitButton } from "./submit-button";
+import { Modal } from "@/app/components/common/modal";
 
 export const Calculator = () => {
+  const [showModal, setShowModal] = useState(false);
   const [selectedType, setSelectedType] = useState(null);
   const [isLit, setIsLit] = useState(false);
   const [isLogo, setIsLogo] = useState(false);
   const [name, setName] = useState("");
+
+  const onCloseModal = () => {
+    setShowModal(false);
+  };
 
   const [clientName, setClientName] = useState("");
   const [phone, setPhone] = useState("");
@@ -21,7 +28,17 @@ export const Calculator = () => {
   const [height, setHeight] = useState(10);
 
   const onSuccessSubmit = () => {
+    setShowModal(true);
     setClientName("");
+    setSelectedType(null);
+    setIsLit(false);
+    setIsLogo(false);
+    setName("");
+    setPhone("");
+    setEmail("");
+    setMsg("");
+    setWidth(0);
+    setHeight(0);
   };
 
   const getTotal = () => {
@@ -35,6 +52,38 @@ export const Calculator = () => {
     }
 
     return "We need more details from you. Please submit the form or contact us to get your estimate";
+  };
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAIL_JS_ID as string,
+        process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID as string,
+        {
+          estimate: getTotal(),
+          type: selectedType,
+          signName: name,
+          email: email,
+          name: clientName,
+          phone: phone,
+          isLit: isLit,
+          isLogo: isLogo,
+          widht: width,
+          msg: msg,
+        },
+        {
+          publicKey: process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY as string,
+        }
+      )
+      .then(
+        () => {
+          onSuccessSubmit();
+        },
+        (error) => {
+          alert("Error:" + error);
+        }
+      );
   };
 
   return (
@@ -65,7 +114,7 @@ export const Calculator = () => {
           </a>
         </div>
       </div>
-      <div className="md:w-1/2 w-full p-4">
+      <form onSubmit={sendEmail} className="md:w-1/2 w-full p-4">
         <div className="mb-4">
           <Step1 selectedType={selectedType} onSelect={setSelectedType} />
         </div>
@@ -94,6 +143,7 @@ export const Calculator = () => {
             setPhone={setPhone}
           />
           <SubmitButton
+            onSuccess={onSuccessSubmit}
             estimate={getTotal()}
             email={email}
             isLit={isLit}
@@ -106,7 +156,8 @@ export const Calculator = () => {
             width={width}
           />
         </div>
-      </div>
+      </form>
+      <Modal isOpen={showModal} onOk={onCloseModal} />
     </div>
   );
 };

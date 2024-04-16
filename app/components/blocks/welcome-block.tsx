@@ -1,4 +1,4 @@
-import { Wrapper } from "../wrapper";
+import { Wrapper } from "../common/wrapper";
 
 export const WelcomeBlock = () => {
   return (

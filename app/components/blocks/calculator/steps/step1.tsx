@@ -19,6 +19,8 @@ export const Step1 = (props: Props) => {
       <div className="flex flex-col gap-4">
         <div className="flex items-center">
           <input
+            required
+            radioGroup="1"
             onClick={(e: any) => props.onSelect(TYPE1)}
             id="default-radio-1"
             type="radio"
@@ -35,6 +37,8 @@ export const Step1 = (props: Props) => {
         </div>
         <div className="flex items-center">
           <input
+            required
+            radioGroup="1"
             onClick={(e: any) => props.onSelect(TYPE2)}
             id="default-radio-2"
             type="radio"
@@ -51,6 +55,8 @@ export const Step1 = (props: Props) => {
         </div>
         <div className="flex items-center">
           <input
+            required
+            radioGroup="1"
             onClick={(e: any) => props.onSelect(TYPE3)}
             id="default-radio-3"
             type="radio"

@@ -1,5 +1,5 @@
-import { WeOfferItem } from "../we-offer-item";
-import { Wrapper } from "../wrapper";
+import { WeOfferItem } from "./we-offer-item";
+import { Wrapper } from "../../common/wrapper";
 
 export const WeOfferBlock = () => {
   return (

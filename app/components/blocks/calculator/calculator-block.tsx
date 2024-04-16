@@ -1,5 +1,5 @@
-import { Calculator } from "../calculator/calculator";
-import { Wrapper } from "../wrapper";
+import { Calculator } from "./components/calculator";
+import { Wrapper } from "../../common/wrapper";
 
 export const CalculatorBlock = () => {
   return (

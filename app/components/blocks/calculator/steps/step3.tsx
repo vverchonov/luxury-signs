@@ -1,4 +1,4 @@
-import { SubmitButton } from "./submit-button";
+import { SubmitButton } from "../components/submit-button";
 
 type Props = {
   clientName: string;
@@ -50,13 +50,13 @@ export const Step3 = (props: Props) => {
       />
 
       <label
-        htmlFor="brandName"
+        htmlFor="phone"
         className="block mb-2 text-xl font-medium text-gray-900 dark:text-white"
       >
         Contact phone number:
       </label>
       <input
-        type="text"
+        type="tel"
         id="phone"
         value={props.phone}
         onChange={(e: any) => {
