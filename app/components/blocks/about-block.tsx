@@ -13,16 +13,13 @@ export const AboutUsBlock = () => {
             WHO WE ARE
           </p>
           <p className="grey-text text-xl p-2 font-na text-left md:text-right md:pe-16">
-            In publishing and graphic design, Lorem ipsum is a placeholder text
-            commonly used to demonstrate the visual form of a document or a
-            typeface without relying on meaningful content. In publishing and
-            graphic design, Lorem ipsum is a placeholder text commonly used to
-            demonstrate the visual form of a document or a typeface without
-            relying on meaningful content.In publishing and graphic design,
-            Lorem ipsum is a placeholder text commonly used to demonstrate the
-            visual form of a document or a typeface without relying on
-            meaningful content.In publishing and graphic design, Lorem ipsum is
-            a placeholder
+            Luxury Designs Signs is a fast-growing sign company, that supports
+            your end-to-end sign solution needs across Ontario. We help design,
+            manufacture, and install Custom store front signs, Channel letters,
+            Lignt boxes, Window decals and more, while providing the best
+            service and rates. To find out more, take a look at our website,
+            email us or pick up the phone and give us a call! We look forward to
+            meeting you.
           </p>
         </div>
         <div className="w-full md:w-1/2">
@@ -46,16 +43,12 @@ export const AboutUsBlock = () => {
             WHY to INVEST IN SIGNAGE
           </p>
           <p className="grey-text text-xl p-2 font-na text-left md:text-right md:pe-16">
-            In publishing and graphic design, Lorem ipsum is a placeholder text
-            commonly used to demonstrate the visual form of a document or a
-            typeface without relying on meaningful content. In publishing and
-            graphic design, Lorem ipsum is a placeholder text commonly used to
-            demonstrate the visual form of a document or a typeface without
-            relying on meaningful content.In publishing and graphic design,
-            Lorem ipsum is a placeholder text commonly used to demonstrate the
-            visual form of a document or a typeface without relying on
-            meaningful content.In publishing and graphic design, Lorem ipsum is
-            a placeholder
+            Signage is essential for businesses as it communicates brand
+            identity, attracts customers, and promotes products or services
+            effectively. From storefront signs to promotional banners, signage
+            plays a crucial role in enhancing visibility, guiding customers, and
+            reinforcing brand recognition, ultimately contributing to business
+            success.
           </p>
         </div>
         <div className="w-full block md:hidden md:w-1/2 content-right">

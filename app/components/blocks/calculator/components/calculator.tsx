@@ -88,21 +88,19 @@ export const Calculator = () => {
 
   return (
     <div className="w-100 flex flex-col md:flex-row">
-      <div className="md:w-1/2 pt-8 pb-8 md:p-12 lg:p-30">
+      <div className="md:w-1/2 pt-8 pb-8 md:p-12 lg:p-30 flex flex-col">
         <h2 className="text-5xl text-white mb-12 uppercase font-semibold">
           Get your estimate in one minute
         </h2>
         <p className="text-2xl font-na text-white font-light mb-8">
-          In publishing and graphic design, Lorem ipsum is a placeholder text
-          commonly used to demonstrate the visual form of a document or a
-          typeface without relying on meaningful content. In publishing and
-          graphic design, Lorem ipsum is a placeholder text commonly used to
-          demonstrate the visua
+          "Discover the perfect sign for your needs with our intuitive price
+          calculator. Simply input your specifications and get an instant
+          estimate. Let's bring your vision to life, hassle-free."
         </p>
-        <div className="flex flex-row md:flex-col">
+        <div className="flex flex-row md:flex-col my-auto text-center">
           <a
             href="tel:+12263789562"
-            className="text-white mb-2 me-4 md:text-center font-na text-2xl"
+            className="text-white mb-2 md:text-center font-na text-2xl"
           >
             +1(226)378-9562 Vlad
           </a>
@@ -113,6 +111,10 @@ export const Calculator = () => {
             +1(226)378-9562 Rami
           </a>
         </div>
+        <p className="text-white text-small font-na mt-auto">
+          The price is an estimate and can vary depends on the uniqueness of the
+          job.
+        </p>
       </div>
       <form
         onSubmit={sendEmail}

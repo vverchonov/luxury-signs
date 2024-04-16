@@ -25,7 +25,7 @@ html {
 }
 
 .h1-text {
-  margin-top: calc((100vh - 72px) * 0.23);
+  margin-top: calc((100vh * 0.3) - 80px);
 }
 
 .dark-back {
@@ -190,7 +190,7 @@ html {
 @media only screen and (max-width: 767px) {
   /* WELCOME BLOCK */
   .h1-text {
-    margin-top: calc((100vh - 72px) * 0.25);
+    margin-top: calc((100vh * 0.3) - 56px);
     font-size: 4.5rem; /* 60px */
   }
 
@@ -243,4 +243,13 @@ label {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
 }
