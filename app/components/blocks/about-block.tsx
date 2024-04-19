@@ -25,7 +25,7 @@ export const AboutUsBlock = () => {
         <div className="w-full md:w-1/2">
           <Image
             fill={true}
-            className="w-fill h-auto pos-rel "
+            className="w-fill h-auto pos-rel object-cover"
             alt="text"
             src={"/assets/png/picture-1.png"}
           />
@@ -33,7 +33,7 @@ export const AboutUsBlock = () => {
         <div className="w-full hidden md:block md:w-1/2 content-right">
           <Image
             fill={true}
-            className="w-fill h-auto pos-rel "
+            className="w-fill h-auto pos-rel object-cover"
             alt="text"
             src={"/assets/png/picture-2.png"}
           />
