@@ -70,18 +70,18 @@ export const NavbarCustom = () => {
       <Navbar.Collapse>
         <Navbar.Link
           href="#welcome-block"
-          className="block py-2 px-3 text-white text-2xl rounded md:p-0 hover:text-black font-na nav-items"
+          className="block py-2 px-3 text-white text-2xl md:p-0 hover:text-black font-na nav-items"
         >
           Home
         </Navbar.Link>
         <Navbar.Link
-          className="block py-2 px-3 text-white text-2xl rounded md:p-0 hover:text-black font-na nav-items"
+          className="block py-2 px-3 text-white text-2xl md:p-0 hover:text-black font-na nav-items"
           href="#products-block"
         >
           Products
         </Navbar.Link>
         <Navbar.Link
-          className="block py-2 px-3 text-white text-2xl rounded md:p-0 hover:text-black font-na nav-items"
+          className="block py-2 px-3 text-white text-2xl md:p-0 hover:text-black font-na nav-items"
           href="#carousel-block"
         >
           Gallery

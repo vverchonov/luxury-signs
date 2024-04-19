@@ -17,6 +17,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <script
+          src="https://apis.google.com/js/platform.js"
+          async
+          defer
+        ></script>
+
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

@@ -10,6 +10,7 @@ export type Review = {
   name: string;
   starRating: Rating;
   comment: string;
+  link: string;
 };
 
 type Props = {
@@ -36,13 +37,23 @@ const getStars = (val: number) => {
 };
 
 export const Review = (props: Props) => {
+  const onClick = (url: string) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   return (
-    <div className="flex p-8 gap-4 flex-col bg-slate-100 rounded h-full">
+    <div className=" flex p-8 gap-4 flex-col bg-slate-100 rounded h-full">
       <div className="flex flex-row align-center">
         <p className="text-3xl font-bold font-cor text-left">
           {props.review.name}
         </p>
-        <img className="ms-auto w-8 h-8" src="./assets/png/google.png" />
+        <img
+          onClick={() => {
+            onClick(props.review.link);
+          }}
+          className="cursor-pointer ms-auto w-8 h-8"
+          src="./assets/png/google.webp"
+        />
       </div>
       <div className="text-left flex flex-row gap-1">
         {getStars(props.review.starRating)}
@@ -50,7 +61,14 @@ export const Review = (props: Props) => {
       <p className="text-lg text-left">
         {props.review.comment.slice(0, 100)}...
       </p>
-      <a className="cursor-pointer text-left">Read more...</a>
+      <a
+        onClick={() => {
+          onClick(props.review.link);
+        }}
+        className="cursor-pointer text-left text-lg"
+      >
+        Read on Google...
+      </a>
     </div>
   );
 };

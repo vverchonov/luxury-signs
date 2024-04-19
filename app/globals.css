@@ -253,3 +253,7 @@ label {
 .slick-next:before {
   color: black !important;
 }
+
+.slick-arrow {
+  display: none !important;
+}

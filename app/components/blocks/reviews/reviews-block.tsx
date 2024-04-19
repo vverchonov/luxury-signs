@@ -9,28 +9,32 @@ import { useWidth } from "../../hooks/width-hook";
 
 const testimonials = [
   {
-    name: "Ben Blue",
+    name: "Ahmed Hussein",
     starRating: Rating.FIVE,
-    comment:
-      "Wow! The signage from this company completely transformed our business! Our foot traffic has doubled since we installed their eye-catching signs.",
+    comment: `I had the team over at luxury design signs help me install some exterior signs! The process was really smooth and efficient and the results were phenomenal! The Sign looked really good and the brightness level on It was perfect.
+
+    For my next sign, I already know who to call - Luxury Design Signs!`,
+    link: "https://maps.app.goo.gl/mMPESweNtCjsWFaAA",
   },
   {
-    name: "George Brown",
+    name: "Cass Arraial",
     starRating: Rating.FIVE,
-    comment:
-      "I can't thank this signage company enough for their incredible work. Our sales have skyrocketed ever since we upgraded our signage strategy!",
+    comment: `Thank you to the Luxury Design Signs’ team for working so quickly, and so well with one of my clients & I. Not only were they over the moon with how the sign looked, but we’ve received so many compliments from customers as well!
+
+    Will definitely continue to work with the LDS team!!`,
+    link: "https://maps.app.goo.gl/gTjXU2chKTwWHeyM6",
   },
   {
-    name: "Lily Green",
+    name: "Candice Pirali- Figurova",
     starRating: Rating.FIVE,
-    comment:
-      "Absolutely blown away by the professionalism and creativity of this signage company. Our competitors are green with envy over our new signage!",
+    comment: `The most outstanding service. Hands down the best sign company I have ever worked with. They went the extra mile to ensure I received my signs in time for my store opening on two occasions. I highly recommend them!`,
+    link: "https://maps.app.goo.gl/xNiJvDfW681PCPDH7",
   },
   {
-    name: "Peter Grey",
+    name: "Ksenia Pavluchkova",
     starRating: Rating.FIVE,
-    comment:
-      "From concept to installation, this signage company exceeded all our expectations. Their attention to detail and commitment to quality are unmatched. Our business has never been more visible!",
+    comment: `Vlad really helped me bring my idea to life. Really happy with my new window decal design 😍 …`,
+    link: "https://maps.app.goo.gl/FHbKfE1cvH4HjhPaA",
   },
 ];
 
