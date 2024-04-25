@@ -16,28 +16,34 @@ export const CarouselBlock = () => {
         <div className="embla__container min-h-fit md:min-h-96">
           {" "}
           <div className="embla__slide" key={1}>
-            <img
-              className="carousel-img"
-              src="https://cdn.shopify.com/s/files/1/0066/4574/3686/files/Abstract_LinkedIn_Background.png?v=1627912075"
-            />
+            <img className="carousel-img" src="./carousel/1.webp" />
           </div>{" "}
           <div className="embla__slide" key={2}>
-            <img
-              className="carousel-img"
-              src="https://marketplace.canva.com/EAFqqGQof14/1/0/1600w/canva-blue-minimalist-abstract-wave-linkedin-banner-jFsA3DjIRXM.jpg"
-            />
+            <img className="carousel-img" src="./carousel/2.webp" />
           </div>{" "}
           <div className="embla__slide" key={3}>
-            <img
-              className="carousel-img"
-              src="https://cdn.shopify.com/s/files/1/0066/4574/3686/files/Abstract_LinkedIn_Background.png?v=1627912075"
-            />
+            <img className="carousel-img" src="./carousel/3.webp" />
           </div>{" "}
           <div className="embla__slide" key={4}>
-            <img
-              className="carousel-img"
-              src="https://marketplace.canva.com/EAFqqGQof14/1/0/1600w/canva-blue-minimalist-abstract-wave-linkedin-banner-jFsA3DjIRXM.jpg"
-            />
+            <img className="carousel-img" src="./carousel/4.webp" />
+          </div>{" "}
+          <div className="embla__slide" key={5}>
+            <img className="carousel-img" src="./carousel/5.webp" />
+          </div>{" "}
+          <div className="embla__slide" key={6}>
+            <img className="carousel-img" src="./carousel/6.webp" />
+          </div>{" "}
+          <div className="embla__slide" key={7}>
+            <img className="carousel-img" src="./carousel/7.webp" />
+          </div>{" "}
+          <div className="embla__slide" key={8}>
+            <img className="carousel-img" src="./carousel/8.webp" />
+          </div>{" "}
+          <div className="embla__slide" key={9}>
+            <img className="carousel-img" src="./carousel/9.webp" />
+          </div>{" "}
+          <div className="embla__slide" key={10}>
+            <img className="carousel-img" src="./carousel/10.webp" />
           </div>{" "}
         </div>{" "}
       </div>
