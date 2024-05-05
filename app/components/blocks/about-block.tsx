@@ -9,7 +9,7 @@ export const AboutUsBlock = () => {
         className="light-back w-full m-h-screen flex flex-wrap"
       >
         <div className="md:w-1/2 p-2 md:p-24">
-          <p className="grey-text font-na text-8xl text-right mb-8 font-bold">
+          <p className="grey-text font-na text-5xl md:text-8xl text-right mb-8 font-bold">
             WHO WE ARE
           </p>
           <p className="grey-text text-xl p-2 font-na text-left md:text-right md:pe-16">
@@ -39,7 +39,7 @@ export const AboutUsBlock = () => {
           />
         </div>
         <div className="md:w-1/2 p-2 md:p-24">
-          <p className="grey-text font-na text-8xl text-left mb-8 font-bold">
+          <p className="grey-text font-na text-5xl md:text-8xl text-left mb-8 font-bold">
             WHY to INVEST IN SIGNAGE
           </p>
           <p className="grey-text text-xl p-2 font-na text-left md:text-right md:pe-16">

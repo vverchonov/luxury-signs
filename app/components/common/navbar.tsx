@@ -2,13 +2,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Button, Navbar } from "flowbite-react";
+import { Button, Dropdown, Navbar } from "flowbite-react";
 
 export const NavbarCustom = () => {
   return (
     <Navbar className="main-back fixed w-full z-20 top-0 start-0">
       <div className="flex flex-row space-between">
-        <a href="#welcome-block" className="flex items-center me-8">
+        <a href="/" className="flex items-center me-8">
           <Image
             src={"/assets/png/logo.png"}
             alt="text"
@@ -59,7 +59,7 @@ export const NavbarCustom = () => {
       </div>
       <div className="flex md:order-2">
         <a
-          href="#calculator-block"
+          href="/#calculator-block"
           type="button"
           className="text-white text-lg cursor-pointer font-semibold focus:ring-4 font-na focus:outline-none focus:ring-white font-medium px-4 py-2 text-center transform transition duration-500 hover:scale-110 nav-button-sell"
         >
@@ -69,12 +69,54 @@ export const NavbarCustom = () => {
       </div>
       <Navbar.Collapse>
         <Navbar.Link
-          href="#welcome-block"
+          href="/"
           className="block py-2 px-3 text-white text-2xl md:p-0 hover:text-black font-na nav-items"
         >
           Home
         </Navbar.Link>
         <Navbar.Link
+          href="/toronto"
+          className="block py-2 px-3 text-white text-2xl md:p-0 hover:text-black font-na nav-items"
+        >
+          Toronto
+        </Navbar.Link>
+        <Navbar.Link
+          href="/london"
+          className="block py-2 px-3 text-white text-2xl md:p-0 hover:text-black font-na nav-items"
+        >
+          London
+        </Navbar.Link>
+        {/* <Dropdown
+          id={"test"}
+          className="p-0"
+          label={
+            <Navbar.Link
+              href="/"
+              className="block text-white text-2xl hover:text-black font-na nav-items"
+            >
+              Home
+            </Navbar.Link>
+          }
+          dismissOnClick={false}
+        >
+          <Dropdown.Item>
+            <Navbar.Link
+              href="/toronto"
+              className="block text-2xl hover:text-black font-na nav-items"
+            >
+              Toronto
+            </Navbar.Link>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <Navbar.Link
+              href="/london"
+              className="block text-2xl hover:text-black font-na nav-items"
+            >
+              London
+            </Navbar.Link>
+          </Dropdown.Item>
+        </Dropdown> */}
+        {/* <Navbar.Link
           className="block py-2 px-3 text-white text-2xl md:p-0 hover:text-black font-na nav-items"
           href="#products-block"
         >
@@ -85,7 +127,7 @@ export const NavbarCustom = () => {
           href="#carousel-block"
         >
           Gallery
-        </Navbar.Link>
+        </Navbar.Link> */}
       </Navbar.Collapse>
     </Navbar>
     // <nav className="main-back fixed w-full z-20 top-0 start-0">

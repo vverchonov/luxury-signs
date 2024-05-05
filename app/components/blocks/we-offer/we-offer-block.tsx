@@ -9,7 +9,7 @@ export const WeOfferBlock = () => {
         className="w-full p-4 md:ps-48 md:pe-48 md:pb-24 md:pt-20"
       >
         <div className="flex w-full flex-col">
-          <h2 className="ms-auto text-8xl grey-text mb-4 md:mb-12 font-na font-bold">
+          <h2 className="ms-auto text-5xl md:text-8xl grey-text mb-4 md:mb-12 font-na font-bold">
             WE OFFER
           </h2>
         </div>
