@@ -8,11 +8,11 @@ export const AboutUsBlock = () => {
         id={"about-block"}
         className="light-back w-full m-h-screen flex flex-wrap"
       >
-        <div className="md:w-1/2 p-2 md:p-24 px-8 md:px-0">
-          <p className="grey-text font-na text-5xl md:text-8xl text-left md:mt-0 mt-4 md:text-right mb-8 font-bold">
+        <div className="md:w-1/2 p-2 md:p-24 px-8">
+          <p className="grey-text font-na text-5xl md:text-8xl text-left md:mt-0 mt-4 md:text-right mb-8 font-bold px-8 mt-4">
             WHO WE ARE
           </p>
-          <p className="grey-text text-lg md:text-xl p-2 font-na text-left md:text-right md:pe-16">
+          <p className="grey-text text-lg md:text-xl ms-auto md:w-10/12 w-full font-na text-left md:text-left">
             Luxury Designs Signs is a fast-growing sign company, that supports
             your end-to-end sign solution needs across Ontario. We help design,
             manufacture, and install Custom store front signs, Channel letters,
@@ -42,7 +42,7 @@ export const AboutUsBlock = () => {
           <p className="grey-text font-na text-5xl md:text-8xl text-left mb-8 font-bold px-8 mt-4">
             WHY to INVEST IN SIGNAGE
           </p>
-          <p className="grey-text text-lg md:text-xl p-2 font-na text-left md:text-right px-8 md:px-0">
+          <p className="grey-text text-lg md:text-xl p-2 font-na text-left md:w-10/12 w-full md:text-right px-8 md:px-0">
             Signage is essential for businesses as it communicates brand
             identity, attracts customers, and promotes products or services
             effectively. From storefront signs to promotional banners, signage
