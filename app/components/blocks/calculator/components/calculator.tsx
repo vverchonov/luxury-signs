@@ -90,7 +90,7 @@ export const Calculator = () => {
     <div className="w-100 flex flex-col md:flex-row">
       <div className="md:w-1/2 pt-8 pb-8 md:p-12 lg:p-30 flex flex-col">
         <h2 className="text-5xl text-white mb-12 uppercase font-semibold">
-          Get your estimate in one minute
+          Get your estimate
         </h2>
         <p className="text-2xl font-na text-white font-light mb-8">
           "Discover the perfect sign for your needs with our intuitive price
@@ -111,19 +111,27 @@ export const Calculator = () => {
             +1(226)378-9562 Rami
           </a>
         </div>
-        <p className="text-white text-small font-na mt-auto">
+        {/* <p className="text-white text-small font-na mt-auto">
           The price is an estimate and can vary depends on the uniqueness of the
           job.
-        </p>
+        </p> */}
       </div>
       <form
         onSubmit={sendEmail}
         className="md:w-1/2 w-full p-4 flex flex-col justify-center"
       >
-        <div className="mb-4">
+        {/* <div className="mb-4">
           <Step1 selectedType={selectedType} onSelect={setSelectedType} />
-        </div>
-        <div className="mb-4">
+        </div> */}
+        <div>
+          <Step3
+            clientName={clientName}
+            email={email}
+            phone={phone}
+            setClientName={setClientName}
+            setEmail={setEmail}
+            setPhone={setPhone}
+          />
           <Step2
             height={height}
             width={width}
@@ -136,16 +144,6 @@ export const Calculator = () => {
             setIsLogo={(e) => setIsLogo(e)}
             name={name}
             setName={setName}
-          />
-        </div>
-        <div>
-          <Step3
-            clientName={clientName}
-            email={email}
-            phone={phone}
-            setClientName={setClientName}
-            setEmail={setEmail}
-            setPhone={setPhone}
           />
           <SubmitButton
             onSuccess={onSuccessSubmit}

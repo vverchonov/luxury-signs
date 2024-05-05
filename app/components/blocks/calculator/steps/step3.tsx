@@ -12,7 +12,6 @@ type Props = {
 export const Step3 = (props: Props) => {
   return (
     <>
-      <p className="text-white text-3xl mb-2 font-bold">Contact info:</p>
       <label
         htmlFor="clientName"
         className="block mb-2 text-xl font-medium text-gray-900 dark:text-white"

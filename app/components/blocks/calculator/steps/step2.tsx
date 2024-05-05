@@ -102,8 +102,6 @@ export const Step2 = (props: Props) => {
   const type3 = () => {
     return (
       <>
-        <p className="text-white text-3xl mb-2 font-bold">Step 2:</p>
-
         <label
           htmlFor="message"
           className="block mb-2 text-xl font-medium text-gray-900 dark:text-white"
@@ -113,18 +111,12 @@ export const Step2 = (props: Props) => {
         <textarea
           id="message"
           rows={4}
-          className="block p-2.5 w-full text-xl text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+          className="block mb-2 p-2.5 w-full text-xl text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
           placeholder="Please type what kind of signage are you looking for. Give us any details that can help on the job. Thanks!"
         ></textarea>
       </>
     );
   };
 
-  return (
-    <>
-      {props.selectedType === TYPE1 && type1()}
-      {props.selectedType === TYPE2 && type2()}
-      {props.selectedType === TYPE3 && type3()}
-    </>
-  );
+  return <>{type3()}</>;
 };

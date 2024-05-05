@@ -63,7 +63,7 @@ export const NavbarCustom = () => {
           type="button"
           className="text-white text-lg cursor-pointer font-semibold focus:ring-4 font-na focus:outline-none focus:ring-white font-medium px-4 py-2 text-center transform transition duration-500 hover:scale-110 nav-button-sell"
         >
-          ESTIMATE NOW
+          GET ESTIMATE
         </a>
         <Navbar.Toggle className="text-white ms-4" />
       </div>

@@ -22,7 +22,7 @@ export const WelcomeBlock = () => {
             type="button"
             className="estimate-button mb-56 w-fit gentle-shake font-na font-semibold text-white main-back text-2xl focus:ring-4 focus:outline-none focus:ring-white font-medium px-8 py-4 text-center transform transition duration-500 hover:scale-110"
           >
-            ESTIMATE NOW
+            GET ESTIMATE
           </a>
         </div>
       </Wrapper>

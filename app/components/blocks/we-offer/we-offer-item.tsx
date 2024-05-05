@@ -13,7 +13,7 @@ export const WeOfferItem = (props: any) => {
         type="button"
         className="estim-button m-2 mt-auto text-white dark-back w-fit font-na font-semibold text-xl uppercase focus:ring-4 focus:outline-none focus:ring-white font-medium px-3 py-4 text-center transform transition duration-500 hover:scale-110"
       >
-        Estimate now
+        Get Estimate
       </a>
     </div>
   );
