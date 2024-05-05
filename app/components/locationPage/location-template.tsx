@@ -9,7 +9,7 @@ export const LocationTemplate = (props: any) => {
         <div className="flex flex-col md:flex-row gap-6 md:mt-0 mt-24">
           <div className="w-full md:w-6/12 flex flex-col gap-8 justify-center">
             <div className="flex gap-5 flex-col align-center justify-center items-center">
-              <h1 className="text-5xl font-semibold text-black">
+              <h1 className="text-5xl text-center font-semibold text-black">
                 {props.mainText}
               </h1>
               <p className="font-na mb-4 text-xl">{props.text}</p>
