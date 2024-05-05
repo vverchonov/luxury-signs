@@ -16,7 +16,7 @@ export const WelcomeBlock = () => {
         <p className="md:block hidden text-6xl text-white mt-5 font-cor font-semibold secondary-text">
           LUXURY DESIGN SIGNS
         </p>
-        <div className="w-full flex flex-row content-center justify-center text-center">
+        <div className="w-full flex flex-row content-center mt-auto justify-center text-center">
           <a
             href="#calculator-block"
             type="button"
