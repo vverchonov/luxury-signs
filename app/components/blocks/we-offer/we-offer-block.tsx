@@ -92,7 +92,7 @@ export const WeOfferBlock = () => {
             image={"./we-offer/11.webp"}
           />
         </div>
-        <p className="font-na text-xl md:text-3xl text-center mt-8 md:mt-16">
+        <p className="font-na text-lg md:text-3xl text-center mt-8 md:mt-16 px-8 md:px-0">
           Each type of signage has its own unique benefits and ideal
           applications. Businesses can choose based on their branding goals,
           visibility needs, budget, and desired aesthetic.
