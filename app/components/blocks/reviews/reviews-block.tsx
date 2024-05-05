@@ -80,7 +80,7 @@ export const ReviewsBlock = () => {
   return (
     <Wrapper>
       <section className="m-h-[50vh] flex flex-col bg-white w-full text-center p-4 md:p-24">
-        <h2 className="text-5xl font-semibold text-black mb-12">
+        <h2 className="text-5xl font-semibold text-black mb-12 mt-8">
           Testimonials
         </h2>
         {slider()}
