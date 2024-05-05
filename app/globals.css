@@ -26,7 +26,7 @@ html {
 }
 
 .h1-text {
-  margin-top: calc((100vh * 0.3) - 80px);
+  margin-top: calc((100vh * 0.3) - 65px);
 }
 
 .dark-back {
@@ -204,8 +204,8 @@ html {
 @media only screen and (max-width: 767px) {
   /* WELCOME BLOCK */
   .h1-text {
-    margin-top: calc((100vh * 0.3) - 56px);
-    font-size: 4.5rem; /* 60px */
+    margin-top: calc((100vh * 0.3) - 30px);
+    font-size: 3.5rem; /* 60px */
   }
 
   .secondary-text {
