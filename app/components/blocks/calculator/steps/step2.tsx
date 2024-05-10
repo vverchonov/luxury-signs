@@ -1,6 +1,8 @@
 import { TYPE1, TYPE2, TYPE3 } from "./step1";
 
 type Props = {
+  msg: string;
+  setMsg: (val: string) => void;
   selectedType: string | null;
   name: string;
   setName: (val: string) => void;
@@ -109,6 +111,10 @@ export const Step2 = (props: Props) => {
           Your message:
         </label>
         <textarea
+          value={props.msg}
+          onChange={(e: any) => {
+            props.setMsg(e.target.value);
+          }}
           id="message"
           rows={4}
           className="block mb-2 p-2.5 w-full text-xl text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"

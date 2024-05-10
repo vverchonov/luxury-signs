@@ -9,6 +9,8 @@ import { SubmitButton } from "./submit-button";
 import { Modal } from "@/app/components/common/modal";
 
 export const Calculator = () => {
+  const [file, setFile] = useState();
+
   const [showModal, setShowModal] = useState(false);
   const [selectedType, setSelectedType] = useState(null);
   const [isLit, setIsLit] = useState(false);
@@ -54,36 +56,45 @@ export const Calculator = () => {
     return "We need more details from you. Please submit the form or contact us to get your estimate";
   };
 
+  function handleChange(e: any) {
+    setFile(e.target.files[0]);
+  }
+
   const sendEmail = (e: any) => {
     e.preventDefault();
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_EMAIL_JS_ID as string,
-        process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID as string,
-        {
-          estimate: getTotal(),
-          type: selectedType,
-          signName: name,
-          email: email,
-          name: clientName,
-          phone: phone,
-          isLit: isLit,
-          isLogo: isLogo,
-          widht: width,
-          msg: msg,
-        },
-        {
-          publicKey: process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY as string,
-        }
-      )
-      .then(
-        () => {
-          onSuccessSubmit();
-        },
-        (error) => {
-          alert("Error:" + error);
-        }
-      );
+    const reader = new FileReader();
+    if (file !== undefined) reader.readAsDataURL(file);
+    reader.onload = async (e: any) => {
+      emailjs
+        .send(
+          process.env.NEXT_PUBLIC_EMAIL_JS_ID as string,
+          process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID as string,
+          {
+            estimate: getTotal(),
+            type: selectedType,
+            signName: name,
+            email: email,
+            name: clientName,
+            phone: phone,
+            isLit: isLit,
+            isLogo: isLogo,
+            widht: width,
+            msg: msg,
+            file: reader.result,
+          },
+          {
+            publicKey: process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY as string,
+          }
+        )
+        .then(
+          () => {
+            onSuccessSubmit();
+          },
+          (error) => {
+            alert("Error:" + error);
+          }
+        );
+    };
   };
 
   return (
@@ -133,6 +144,8 @@ export const Calculator = () => {
             setPhone={setPhone}
           />
           <Step2
+            msg={msg}
+            setMsg={setMsg}
             height={height}
             width={width}
             setHeight={setHeight}
@@ -145,19 +158,31 @@ export const Calculator = () => {
             name={name}
             setName={setName}
           />
-          <SubmitButton
-            onSuccess={onSuccessSubmit}
-            estimate={getTotal()}
-            email={email}
-            isLit={isLit}
-            isLogo={isLogo}
-            msg={msg}
-            name={clientName}
-            phone={phone}
-            signName={name}
-            type={selectedType}
-            width={width}
-          />
+
+          <div className="w-full flex flex-row items-center">
+            <SubmitButton
+              onSuccess={onSuccessSubmit}
+              estimate={getTotal()}
+              email={email}
+              isLit={isLit}
+              isLogo={isLogo}
+              msg={msg}
+              name={clientName}
+              phone={phone}
+              signName={name}
+              type={selectedType}
+              width={width}
+            />
+            <label htmlFor="file-upload" className="custom-file-upload ms-auto">
+              Upload Image
+            </label>
+            <input
+              id="file-upload"
+              accept="image/gif, image/jpeg, image/png"
+              onChange={handleChange}
+              type="file"
+            />
+          </div>
         </div>
       </form>
       <Modal isOpen={showModal} onOk={onCloseModal} />
