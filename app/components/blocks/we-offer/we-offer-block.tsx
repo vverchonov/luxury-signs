@@ -136,6 +136,14 @@ export const WeOfferBlock = () => {
                 }
                 image={"./we-offer/11.webp"}
               />
+              <WeOfferItem
+                imgAlt={"Sign Permits"}
+                name={"Sign Permits"}
+                text={
+                  "Getting a sign permit ensures legal compliance, safety, and community aesthetics. It prevents fines, removal orders, and legal issues while demonstrating responsibility and respect for regulations."
+                }
+                image={"./we-offer/14.webp"}
+              />
             </>
           ) : (
             <></>
