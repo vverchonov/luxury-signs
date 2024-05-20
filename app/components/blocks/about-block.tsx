@@ -9,7 +9,7 @@ export const AboutUsBlock = () => {
         className="light-back w-full m-h-screen flex flex-wrap"
       >
         <div className="md:w-1/2 p-2 md:p-24 px-8">
-          <p className="grey-text font-na text-5xl md:text-8xl text-left md:mt-0 mt-4 md:text-right mb-8 font-bold md:px-8 mt-4 mt-8">
+          <p className="grey-text font-na text-5xl md:text-8xl text-left md:mt-0 md:text-right mb-8 font-bold md:px-8 mt-8">
             WHO WE ARE
           </p>
           <p className="grey-text text-lg md:text-xl ms-auto md:w-10/12 w-full font-na text-left md:text-left md:mb-0 mb-8">
