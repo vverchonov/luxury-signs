@@ -2,7 +2,7 @@ import { WelcomeBlock } from "./components/blocks/welcome-block";
 import { WeOfferBlock } from "./components/blocks/we-offer/we-offer-block";
 import { CalculatorBlock } from "./components/blocks/calculator/calculator-block";
 import { AboutUsBlock } from "./components/blocks/about-block";
-import { CarouselBlock } from "./components/blocks/carousel-block";
+import { CarouselBlock } from "./components/blocks/carousel-block/carousel-block";
 import { ReviewsBlock } from "./components/blocks/reviews/reviews-block";
 
 export default function Home() {
