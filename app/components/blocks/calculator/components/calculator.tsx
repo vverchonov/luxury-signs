@@ -108,17 +108,11 @@ export const Calculator = () => {
           calculator. Simply input your specifications and get an instant
           estimate. Let's bring your vision to life, hassle-free."
         </p>
-        <div className="flex flex-col gap-2 md:flex-row my-auto text-center mb-4">
-          <a
-            href="tel:+12263789562"
-            className="text-white md:text-center font-na text-2xl"
-          >
+        <div className="flex flex-col gap-4 my-auto mb-4">
+          <a href="tel:+12263789562" className="text-white  font-na text-2xl">
             +1(226)378-9562 Vlad
           </a>
-          <a
-            href="tel:+12263789562"
-            className="text-white md:text-center font-na text-2xl"
-          >
+          <a href="tel:+12263789562" className="text-white  font-na text-2xl">
             +1(226)378-9562 Rami
           </a>
         </div>
