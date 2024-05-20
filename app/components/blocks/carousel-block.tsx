@@ -16,34 +16,95 @@ export const CarouselBlock = () => {
         <div className="embla__container min-h-fit md:min-h-96">
           {" "}
           <div className="embla__slide" key={1}>
-            <img className="carousel-img" src="./carousel/1.webp" />
+            <img
+              alt="golden sign for beauty business"
+              className="carousel-img"
+              src="./carousel/1.webp"
+            />
           </div>{" "}
           <div className="embla__slide" key={2}>
-            <img className="carousel-img" src="./carousel/2.webp" />
+            <img
+              alt="luxury gold letters with light"
+              className="carousel-img"
+              src="./carousel/2.webp"
+            />
           </div>{" "}
           <div className="embla__slide" key={3}>
-            <img className="carousel-img" src="./carousel/3.webp" />
+            <img
+              alt="restaurant LED sign"
+              className="carousel-img"
+              src="./carousel/3.webp"
+            />
           </div>{" "}
           <div className="embla__slide" key={4}>
-            <img className="carousel-img" src="./carousel/4.webp" />
+            <img
+              alt={"retail Mall sign indoor channel letters"}
+              className="carousel-img"
+              src="./carousel/4.webp"
+            />
+          </div>{" "}
+          <div className="embla__slide" key={11}>
+            <img
+              alt="pizza store marquee sign"
+              className="carousel-img"
+              src="./carousel/11.webp"
+            />
+          </div>{" "}
+          <div className="embla__slide" key={12}>
+            <img
+              alt="window decals sticker"
+              className="carousel-img"
+              src="./carousel/12.webp"
+            />
           </div>{" "}
           <div className="embla__slide" key={5}>
-            <img className="carousel-img" src="./carousel/5.webp" />
+            <img
+              alt="store front sign"
+              className="carousel-img"
+              src="./carousel/5.webp"
+            />
           </div>{" "}
           <div className="embla__slide" key={6}>
-            <img className="carousel-img" src="./carousel/6.webp" />
+            <img
+              alt="fast food sign"
+              className="carousel-img"
+              src="./carousel/6.webp"
+            />
+          </div>{" "}
+          <div className="embla__slide" key={13}>
+            <img
+              alt="outdoor plaza sign and pylon"
+              className="carousel-img"
+              src="./carousel/13.webp"
+            />
           </div>{" "}
           <div className="embla__slide" key={7}>
-            <img className="carousel-img" src="./carousel/7.webp" />
+            <img
+              alt="restaurants halo sign"
+              className="carousel-img"
+              src="./carousel/7.webp"
+            />
           </div>{" "}
           <div className="embla__slide" key={8}>
-            <img className="carousel-img" src="./carousel/8.webp" />
+            <img
+              alt="lit up sign"
+              className="carousel-img"
+              src="./carousel/8.webp"
+            />
           </div>{" "}
           <div className="embla__slide" key={9}>
-            <img className="carousel-img" src="./carousel/9.webp" />
+            <img
+              alt="royal sign"
+              className="carousel-img"
+              src="./carousel/9.webp"
+            />
           </div>{" "}
           <div className="embla__slide" key={10}>
-            <img className="carousel-img" src="./carousel/10.webp" />
+            <img
+              alt="store LED box sign"
+              className="carousel-img"
+              src="./carousel/10.webp"
+            />
           </div>{" "}
         </div>{" "}
       </div>
