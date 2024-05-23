@@ -31,6 +31,10 @@ export const Calculator = () => {
 
   const onSuccessSubmit = () => {
     setShowModal(true);
+    clearForn();
+  };
+
+  const clearForn = () => {
     setClientName("");
     setSelectedType(null);
     setIsLit(false);
@@ -87,7 +91,10 @@ export const Calculator = () => {
           onSuccessSubmit();
         },
         (error) => {
-          alert("Error:" + error);
+          alert(
+            "We encountered unexpected problem. Please let us know! Thank you :)"
+          );
+          clearForn();
         }
       );
   };
@@ -176,15 +183,15 @@ export const Calculator = () => {
               type={selectedType}
               width={width}
             />
-            <label htmlFor="file-upload" className="custom-file-upload ms-auto">
+            {/* <label htmlFor="file-upload" className="custom-file-upload ms-auto">
               Upload Image
-            </label>
-            <input
+            </label> */}
+            {/* <input
               id="file-upload"
               accept="image/gif, image/jpeg, image/png"
               onChange={handleChange}
               type="file"
-            />
+            /> */}
           </div>
         </div>
       </form>
