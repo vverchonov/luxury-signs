@@ -15,7 +15,9 @@ export const Modal = (props: Props) => {
             <p className="text-2xl mb-4 font-bold">
               Thank you for your request!
             </p>
-            <p className="text-xl mb-4">The estimate was sent to your email.</p>
+            <p className="text-xl mb-4">
+              We will reach out to you as soon as possible.
+            </p>
             <button
               onClick={props.onOk}
               type="button"

@@ -60,41 +60,50 @@ export const Calculator = () => {
     setFile(e.target.files[0]);
   }
 
+  const sendRequest = (img: any) => {
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAIL_JS_ID as string,
+        process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID as string,
+        {
+          estimate: getTotal(),
+          type: selectedType,
+          signName: name,
+          email: email,
+          name: clientName,
+          phone: phone,
+          isLit: isLit,
+          isLogo: isLogo,
+          widht: width,
+          msg: msg,
+          file: img !== null && img !== undefined ? img : "0",
+        },
+        {
+          publicKey: process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY as string,
+        }
+      )
+      .then(
+        () => {
+          onSuccessSubmit();
+        },
+        (error) => {
+          alert("Error:" + error);
+        }
+      );
+  };
+
   const sendEmail = (e: any) => {
     e.preventDefault();
     const reader = new FileReader();
-    if (file !== undefined) reader.readAsDataURL(file);
-    reader.onload = async (e: any) => {
-      emailjs
-        .send(
-          process.env.NEXT_PUBLIC_EMAIL_JS_ID as string,
-          process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID as string,
-          {
-            estimate: getTotal(),
-            type: selectedType,
-            signName: name,
-            email: email,
-            name: clientName,
-            phone: phone,
-            isLit: isLit,
-            isLogo: isLogo,
-            widht: width,
-            msg: msg,
-            file: reader.result,
-          },
-          {
-            publicKey: process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY as string,
-          }
-        )
-        .then(
-          () => {
-            onSuccessSubmit();
-          },
-          (error) => {
-            alert("Error:" + error);
-          }
-        );
-    };
+    if (file !== undefined) {
+      reader.readAsDataURL(file);
+      reader.onload = async (e: any) => {
+        const img = reader.result;
+        sendRequest(img);
+      };
+    } else {
+      sendRequest(null);
+    }
   };
 
   return (
