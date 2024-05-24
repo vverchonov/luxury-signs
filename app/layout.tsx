@@ -18,6 +18,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta property="og:title" content="Luxury Design Signs" />
+        <meta
+          property="og:description"
+          content="Looking for high-quality custom store signs in Ontario? Luxury Design Signs! Look no further! We design produce and install your signage!"
+        />
+        <meta
+          property="image"
+          content="https://www.luxurydesignsigns.com/header.png"
+        />
+        <meta
+          property="og:image"
+          content="https://www.luxurydesignsigns.com/header.png"
+        />
         <script
           src="https://apis.google.com/js/platform.js"
           async
