@@ -81,7 +81,7 @@ export const Calculator = () => {
     var data = new FormData();
     data.append("file", img);
     //@ts-ignore
-    data.append("file_name", file.name || "");
+    data.append("file_name", file ? file?.name : "");
     data.append("name", clientName);
     data.append("email", email);
     data.append("phone", phone);

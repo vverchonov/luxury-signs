@@ -1,6 +1,5 @@
 import { NextResponse, NextRequest } from "next/server";
 const nodemailer = require("nodemailer");
-import fs from "fs";
 
 // Handles POST requests to /api
 
@@ -9,9 +8,6 @@ export async function POST(request: Request) {
   const username = process.env.EMAIL1;
   const password = process.env.PASSWORD;
   const formData = await request.formData();
-
-  console.log("USERNAME = ", username);
-  console.log("PASSWORD = ", password);
 
   const name = formData.get("name");
   const phone = formData.get("phone");
@@ -22,12 +18,9 @@ export async function POST(request: Request) {
 
   const attachment = {
     filename: imageName,
-    //@ts-ignore
     content: image, // Assuming image is an object with a data property containing file content
     encoding: "base64", // Or use 'utf-8' if the content is plain text
   };
-
-  console.log("image name = ", imageName);
 
   const transporter = await nodemailer.createTransport({
     service: "gmail",
