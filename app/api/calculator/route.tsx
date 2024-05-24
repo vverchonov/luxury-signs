@@ -5,8 +5,9 @@ import fs from "fs";
 // Handles POST requests to /api
 
 export async function POST(request: Request) {
-  const username = process.env.EMAIL;
-  const password = process.env.PASSWORD;
+  const usernameTo = process.env.EMAIL;
+  const username = process.env.EMAIL1;
+  const password = process.env.PASSWORD1;
   const formData = await request.formData();
 
   console.log("USERNAME = ", username);
@@ -29,16 +30,11 @@ export async function POST(request: Request) {
   console.log("image name = ", imageName);
 
   const transporter = await nodemailer.createTransport({
-    host: "smtp-mail.outlook.com",
-    port: 587,
-    tls: {
-      rejectUnauthorized: false,
-    },
+    service: "gmail",
     auth: {
       user: username,
       pass: password,
     },
-    secure: false,
   });
 
   transporter.verify((error: any, success: any) => {
@@ -52,7 +48,7 @@ export async function POST(request: Request) {
   try {
     const mail = await transporter.sendMail({
       from: username,
-      to: username,
+      to: usernameTo,
       replyTo: email,
       subject: `FORM REQUEST LUXURY DESIGN SIGNS`,
       html: `
