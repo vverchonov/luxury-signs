@@ -8,6 +8,18 @@ import { Step3 } from "../steps/step3";
 import { SubmitButton } from "./submit-button";
 import { Modal } from "@/app/components/common/modal";
 
+const convertFileToBase64 = (file: any) => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      //@ts-ignore
+      resolve(reader.result.split(",")[1]);
+    };
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+};
+
 export const Calculator = () => {
   const [file, setFile] = useState();
 
@@ -35,6 +47,7 @@ export const Calculator = () => {
   };
 
   const clearForn = () => {
+    setFile(null as any);
     setClientName("");
     setSelectedType(null);
     setIsLit(false);
@@ -64,52 +77,35 @@ export const Calculator = () => {
     setFile(e.target.files[0]);
   }
 
-  const sendRequest = (img: any) => {
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_EMAIL_JS_ID as string,
-        process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID as string,
-        {
-          estimate: getTotal(),
-          type: selectedType,
-          signName: name,
-          email: email,
-          name: clientName,
-          phone: phone,
-          isLit: isLit,
-          isLogo: isLogo,
-          widht: width,
-          msg: msg,
-          file: img !== null && img !== undefined ? img : "0",
-        },
-        {
-          publicKey: process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY as string,
-        }
-      )
-      .then(
-        () => {
-          onSuccessSubmit();
-        },
-        (error) => {
-          alert(
-            "We encountered unexpected problem. Please let us know! Thank you :)"
-          );
-          clearForn();
-        }
-      );
+  const sendRequest = async (img: any) => {
+    var data = new FormData();
+    data.append("file", img);
+    //@ts-ignore
+    data.append("file_name", file.name || "");
+    data.append("name", clientName);
+    data.append("email", email);
+    data.append("phone", phone);
+    data.append("msg", msg);
+
+    const response = await fetch("/api/calculator", {
+      method: "post",
+      body: data,
+    });
+    if (!response.ok) {
+      alert("Error happened: " + response.status);
+      clearForn();
+    } else {
+      onSuccessSubmit();
+    }
   };
 
-  const sendEmail = (e: any) => {
+  const sendEmail = async (e: any) => {
     e.preventDefault();
-    const reader = new FileReader();
-    if (file !== undefined) {
-      reader.readAsDataURL(file);
-      reader.onload = async (e: any) => {
-        const img = reader.result;
-        sendRequest(img);
-      };
+    if (file) {
+      const base64String = await convertFileToBase64(file);
+      sendRequest(base64String);
     } else {
-      sendRequest(null);
+      sendRequest("");
     }
   };
 
@@ -125,11 +121,11 @@ export const Calculator = () => {
           estimate. Let's bring your vision to life, hassle-free."
         </p>
         <div className="flex flex-col gap-4 my-auto mb-4">
-          <a href="tel:+12263789562" className="text-white  font-na text-2xl">
-            +1(226)378-9562 Vlad
+          <a href="tel:+15192828335" className="text-white  font-na text-2xl">
+            +1(519)282-8335 Rami
           </a>
           <a href="tel:+12263789562" className="text-white  font-na text-2xl">
-            +1(226)378-9562 Rami
+            +1(226)378-9562 Vlad
           </a>
         </div>
         {/* <p className="text-white text-small font-na mt-auto">
@@ -183,15 +179,31 @@ export const Calculator = () => {
               type={selectedType}
               width={width}
             />
-            {/* <label htmlFor="file-upload" className="custom-file-upload ms-auto">
-              Upload Image
-            </label> */}
-            {/* <input
-              id="file-upload"
-              accept="image/gif, image/jpeg, image/png"
-              onChange={handleChange}
-              type="file"
-            /> */}
+            <div className="flex flex-col gap-2 ms-auto justify-center align-middle items-center">
+              <label htmlFor="file-upload" className="custom-file-upload ">
+                Upload Image
+              </label>
+              <input
+                id="file-upload"
+                accept="image/gif, image/jpeg, image/png"
+                onChange={handleChange}
+                type="file"
+              />
+              {file && (
+                <div className="flex flex-row gap-2">
+                  {/* @ts-ignore */}
+                  <p className="text-white">{file && file?.name}</p>
+                  <p
+                    onClick={() => {
+                      setFile(undefined);
+                    }}
+                    className="text-white cursor-pointer border px-2 rounded-lg"
+                  >
+                    X
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </form>

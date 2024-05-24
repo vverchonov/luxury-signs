@@ -22,16 +22,16 @@ export const LocationTemplate = (props: any) => {
                   Get Estimate
                 </a>
                 <a
-                  href="tel:+12263789562"
+                  href="tel:+15192828335"
                   className="text-black text-left font-na text-2xl"
                 >
-                  +1(226)378-9562 Vlad
+                  +1(519)282-8335 Rami
                 </a>
                 <a
                   href="tel:+12263789562"
                   className="text-black text-left font-na text-2xl"
                 >
-                  +1(226)378-9562 Rami
+                  +1(226)378-9562 Vlad
                 </a>
               </div>
             </div>

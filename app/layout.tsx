@@ -6,7 +6,8 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Luxury Design Signs",
-  description: "Custom signs to create revenue",
+  description:
+    "Looking for high-quality custom store signs in Ontario? Luxury Design Signs! Look no further! We design produce and install your signage!",
 };
 
 export default function RootLayout({
