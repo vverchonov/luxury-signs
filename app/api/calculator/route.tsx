@@ -7,7 +7,7 @@ import fs from "fs";
 export async function POST(request: Request) {
   const usernameTo = process.env.EMAIL;
   const username = process.env.EMAIL1;
-  const password = process.env.PASSWORD1;
+  const password = process.env.PASSWORD;
   const formData = await request.formData();
 
   console.log("USERNAME = ", username);
