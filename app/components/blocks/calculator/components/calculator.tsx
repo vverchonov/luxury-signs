@@ -86,16 +86,15 @@ export const Calculator = () => {
     data.append("email", email);
     data.append("phone", phone);
     data.append("msg", msg);
-
+    onSuccessSubmit();
     const response = await fetch("/api/calculator", {
       method: "post",
       body: data,
     });
+
     if (!response.ok) {
       alert("Error happened: " + response.status);
       clearForn();
-    } else {
-      onSuccessSubmit();
     }
   };
 
