@@ -28,18 +28,25 @@ export async function POST(request: Request) {
 
   console.log("image name = ", imageName);
 
-  const transporter = nodemailer.createTransport({
+  const transporter = await nodemailer.createTransport({
     host: "smtp-mail.outlook.com",
-    secureConnection: true,
     port: 587,
     tls: {
-      ciphers: "SSLv3",
+      rejectUnauthorized: false,
     },
     auth: {
       user: username,
       pass: password,
     },
-    secure: true,
+    secure: false,
+  });
+
+  transporter.verify((error: any, success: any) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Server is ready to take our messages");
+    }
   });
 
   try {
