@@ -179,8 +179,11 @@ export const Calculator = () => {
               type={selectedType}
               width={width}
             />
-            <div className="flex flex-col gap-2 ms-auto justify-center align-middle items-center">
-              <label htmlFor="file-upload" className="custom-file-upload ">
+            <div className="flex flex-col gap-2 ms-auto justify-end align-middle items-center">
+              <label
+                htmlFor="file-upload"
+                className="custom-file-upload ms-auto"
+              >
                 Upload Image
               </label>
               <input
@@ -192,12 +195,12 @@ export const Calculator = () => {
               {file && (
                 <div className="flex flex-row gap-2">
                   {/* @ts-ignore */}
-                  <p className="text-white">{file && file?.name}</p>
+                  <p className="text-white text-end">{file && file?.name}</p>
                   <p
                     onClick={() => {
                       setFile(undefined);
                     }}
-                    className="text-white cursor-pointer border px-2 rounded-lg"
+                    className="text-white cursor-pointer border px-2 rounded-lg flex align-middle justify-center items-center"
                   >
                     X
                   </p>
