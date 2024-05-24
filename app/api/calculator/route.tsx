@@ -25,6 +25,7 @@ export async function POST(request: Request) {
 
   console.log("image name = ", imageName);
   //@ts-ignore
+
   console.log("image path = ", image.path);
 
   const transporter = nodemailer.createTransport({
