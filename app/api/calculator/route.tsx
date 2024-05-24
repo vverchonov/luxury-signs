@@ -9,6 +9,9 @@ export async function POST(request: Request) {
   const password = process.env.PASSWORD;
   const formData = await request.formData();
 
+  console.log("USERNAME = ", username);
+  console.log("PASSWORD = ", password);
+
   const name = formData.get("name");
   const phone = formData.get("phone");
   const email = formData.get("email");
@@ -24,9 +27,6 @@ export async function POST(request: Request) {
   };
 
   console.log("image name = ", imageName);
-  //@ts-ignore
-
-  console.log("image path = ", image.path);
 
   const transporter = nodemailer.createTransport({
     host: "smtp-mail.outlook.com",
