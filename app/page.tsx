@@ -4,6 +4,7 @@ import { CalculatorBlock } from "./components/blocks/calculator/calculator-block
 import { AboutUsBlock } from "./components/blocks/about-block";
 import { CarouselBlock } from "./components/blocks/carousel-block/carousel-block";
 import { ReviewsBlock } from "./components/blocks/reviews/reviews-block";
+import { ModelsBlock } from "./components/blocks/models-block/models-block";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <WelcomeBlock />
       <CarouselBlock />
       <WeOfferBlock />
+      <ModelsBlock />
       <AboutUsBlock />
       <ReviewsBlock />
       <CalculatorBlock />

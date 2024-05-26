@@ -115,6 +115,15 @@ html {
   box-shadow: 0px 7px 22.2px 0px #00000096;
 }
 
+.line-div {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  background-color: #ccb363;
+  z-index: 0;
+  height: 50px;
+}
+
 .extra-dark-back {
   background: #262626;
 }
