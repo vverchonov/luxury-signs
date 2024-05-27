@@ -21,16 +21,16 @@ export const Footer = () => {
             luxurydesignsigns@outlook.com
           </a>
           <a
+            href="tel:+15192828335"
+            className="text-white mb-8 text-xl font-na"
+          >
+            +1(519)282-8335 - Rami
+          </a>
+          <a
             href="tel:+12263789562"
             className="text-white mb-2 text-xl font-na"
           >
             +1(226)378-9562 - Vlad
-          </a>
-          <a
-            href="tel:+12263789562"
-            className="text-white mb-8 text-xl font-na"
-          >
-            +1(226)378-9562 - Rami
           </a>
 
           <div className="mt-auto flex flex-row gap-10 align-center items-center">

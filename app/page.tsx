@@ -12,7 +12,7 @@ export default function Home() {
       <WelcomeBlock />
       <CarouselBlock />
       <WeOfferBlock />
-      <ModelsBlock />
+      {/* <ModelsBlock /> */}
       <AboutUsBlock />
       <ReviewsBlock />
       <CalculatorBlock />
