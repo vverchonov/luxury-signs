@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+
 import { Wrapper } from "../../common/wrapper";
 import { useState } from "react";
 import { Models } from "./models";
@@ -51,7 +51,7 @@ export const ModelsBlock = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-4 justify-center w-full h-auto items-center px-4 md:px-16">
-          <Models />
+          <Models selectedID={selectedID} />
         </div>
         <div className="w-full flex flex-row content-center justify-center text-center">
           <a
