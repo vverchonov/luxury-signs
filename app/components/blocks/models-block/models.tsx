@@ -15,7 +15,7 @@ export const Models = (props: any) => {
       <div className={modelClass}>
         <Suspense fallback={<p className="text-black z-50">Loading...</p>}>
           <Canvas className="w-full h-full">
-            <ambientLight intensity={3} />
+            <ambientLight intensity={4} />
             <OrbitControls enablePan={false} enableZoom={false} />
             {selectedID === "1" && (
               <Model texture={"./front1.png"} obj={"./front1.obj"} />
@@ -33,7 +33,7 @@ export const Models = (props: any) => {
       <div className={modelClass}>
         <Suspense fallback={<p className="text-black z-50">Loading...</p>}>
           <Canvas className="w-full h-full">
-            <ambientLight intensity={3} />
+            <ambientLight intensity={4} />
             <OrbitControls enablePan={false} enableZoom={false} />
             {selectedID === "1" && (
               <Model texture={"./front2.png"} obj={"./front2.obj"} />

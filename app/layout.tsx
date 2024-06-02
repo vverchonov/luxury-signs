@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { NavbarCustom } from "./components/common/navbar";
 import { Footer } from "./components/common/footer";
-import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Luxury Design Signs",
@@ -49,6 +49,7 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
+      <GoogleAnalytics gaId="AW-11360712859" />
     </html>
   );
 }

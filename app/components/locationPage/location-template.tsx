@@ -13,7 +13,7 @@ export const LocationTemplate = (props: any) => {
                 {props.mainText}
               </h1>
               <p className="font-na mb-4 text-xl">{props.text}</p>
-              <div className="flex flex-col md:flex-row gap-4 my-auto text-center items-center">
+              <div className="flex flex-col gap-4 my-auto text-center items-center">
                 <a
                   href="/#calculator-block"
                   type="button"
