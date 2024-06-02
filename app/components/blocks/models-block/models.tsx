@@ -13,35 +13,39 @@ export const Models = (props: any) => {
   return (
     <>
       <div className={modelClass}>
-        <Canvas className="w-full h-full">
-          <ambientLight intensity={3} />
-          <OrbitControls enablePan={false} enableZoom={false} />
-          {selectedID === "1" && (
-            <Model texture={"./front1.png"} obj={"./front1.obj"} />
-          )}
-          {selectedID === "2" && (
-            <Model texture={"./closed1.png"} obj={"./closed1.obj"} />
-          )}
-          {selectedID === "3" && (
-            <Model texture={"./both1.png"} obj={"./both1.obj"} />
-          )}
-        </Canvas>
+        <Suspense fallback={<p className="text-black z-50">Loading...</p>}>
+          <Canvas className="w-full h-full">
+            <ambientLight intensity={3} />
+            <OrbitControls enablePan={false} enableZoom={false} />
+            {selectedID === "1" && (
+              <Model texture={"./front1.png"} obj={"./front1.obj"} />
+            )}
+            {selectedID === "2" && (
+              <Model texture={"./closed1.png"} obj={"./closed1.obj"} />
+            )}
+            {selectedID === "3" && (
+              <Model texture={"./both1.png"} obj={"./both1.obj"} />
+            )}
+          </Canvas>
+        </Suspense>
         <p className={textClass}>Outside</p>
       </div>
       <div className={modelClass}>
-        <Canvas className="w-full h-full">
-          <ambientLight intensity={3} />
-          <OrbitControls enablePan={false} enableZoom={false} />
-          {selectedID === "1" && (
-            <Model texture={"./front2.png"} obj={"./front2.obj"} />
-          )}
-          {selectedID === "2" && (
-            <Model texture={"./closed2.png"} obj={"./closed2.obj"} />
-          )}
-          {selectedID === "3" && (
-            <Model texture={"./both2.png"} obj={"./both2.obj"} />
-          )}
-        </Canvas>
+        <Suspense fallback={<p className="text-black z-50">Loading...</p>}>
+          <Canvas className="w-full h-full">
+            <ambientLight intensity={3} />
+            <OrbitControls enablePan={false} enableZoom={false} />
+            {selectedID === "1" && (
+              <Model texture={"./front2.png"} obj={"./front2.obj"} />
+            )}
+            {selectedID === "2" && (
+              <Model texture={"./closed2.png"} obj={"./closed2.obj"} />
+            )}
+            {selectedID === "3" && (
+              <Model texture={"./both2.png"} obj={"./both2.obj"} />
+            )}
+          </Canvas>
+        </Suspense>
         <p className={textClass}>Inside</p>
       </div>
     </>
