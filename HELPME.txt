@@ -1,0 +1,6 @@
+1) git pull origin master
+
+2) do your changes 
+
+3) commit and push 
+
