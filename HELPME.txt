@@ -12,3 +12,11 @@ command + shift + F - to search text
 all images are in public folder
 
 to push changes there, find 3rd tab (Source control)
+
+
+
+to see the result do in terminal in VS Code its right down:
+npm run dev
+
+
+turn it off press control+C in the same terminal
