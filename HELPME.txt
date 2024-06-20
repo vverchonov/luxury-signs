@@ -5,3 +5,10 @@
 3) commit and push 
 
 TEST
+
+
+command + shift + F - to search text
+
+all images are in public folder
+
+to push changes there, find 3rd tab (Source control)
