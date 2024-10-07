@@ -3,6 +3,7 @@ import "./globals.css";
 import { NavbarCustom } from "./components/common/navbar";
 import { Footer } from "./components/common/footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Luxury Design Signs",
@@ -45,6 +46,7 @@ export default function RootLayout({
         ></link>
       </head>
       <body>
+        <Analytics />
         <NavbarCustom />
         {children}
         <Footer />
