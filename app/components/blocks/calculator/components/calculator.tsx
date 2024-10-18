@@ -45,8 +45,8 @@ export const Calculator = () => {
   const onSuccessSubmit = () => {
     setShowModal(true);
     sendGAEvent({
-      event: "formSubmitted",
-      value: `${clientName}, ${phone} ${email} ${msg}`,
+      event: "conversion",
+      value: "",
     });
     clearForn();
   };
