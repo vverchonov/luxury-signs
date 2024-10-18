@@ -44,10 +44,7 @@ export const Calculator = () => {
 
   const onSuccessSubmit = () => {
     setShowModal(true);
-    sendGAEvent({
-      event: "conversion",
-      value: "",
-    });
+    console.log("here 2");
     clearForn();
   };
 
@@ -92,6 +89,12 @@ export const Calculator = () => {
     data.append("phone", phone);
     data.append("msg", msg);
     onSuccessSubmit();
+
+    console.log("qweqwe");
+    sendGAEvent({
+      event: "conversion",
+      value: "",
+    });
 
     const response = await fetch("/api/calculator", {
       method: "post",
