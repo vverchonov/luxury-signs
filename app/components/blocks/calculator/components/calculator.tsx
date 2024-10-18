@@ -6,7 +6,7 @@ import { Step1, TYPE1, TYPE2 } from "../steps/step1";
 import { Step2 } from "../steps/step2";
 import { Step3 } from "../steps/step3";
 import { SubmitButton } from "./submit-button";
-import { sendGAEvent } from "@next/third-parties/google";
+import { GoogleTagManager, sendGTMEvent } from "@next/third-parties/google";
 import { Modal } from "@/app/components/common/modal";
 
 const convertFileToBase64 = (file: any) => {
@@ -91,7 +91,7 @@ export const Calculator = () => {
     onSuccessSubmit();
 
     console.log("qweqwe");
-    sendGAEvent({
+    sendGTMEvent({
       event: "conversion",
       value: "",
     });
@@ -119,6 +119,7 @@ export const Calculator = () => {
 
   return (
     <div className="w-100 flex flex-col md:flex-row">
+      <GoogleTagManager gtmId="GTM-MC6JHWMZ" />
       <div className="md:w-1/2 pt-8 pb-8 md:p-12 lg:p-30 flex flex-col">
         <h2 className="text-5xl text-white mb-12 uppercase font-semibold">
           Get your estimate

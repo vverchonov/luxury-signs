@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { NavbarCustom } from "./components/common/navbar";
 import { Footer } from "./components/common/footer";
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
@@ -52,7 +52,6 @@ export default function RootLayout({
         <Footer />
       </body>
       {/* AW-11360712859 */}
-      <GoogleTagManager gtmId="" />
       <GoogleAnalytics gaId="AW-11360712859" />
     </html>
   );
