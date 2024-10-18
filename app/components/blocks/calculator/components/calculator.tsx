@@ -92,7 +92,7 @@ export const Calculator = () => {
 
     console.log("qweqwe");
     sendGTMEvent({
-      event: "conversion",
+      event: "FormSubmitted",
       value: "",
     });
 
