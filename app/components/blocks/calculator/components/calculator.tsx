@@ -6,6 +6,7 @@ import { Step1, TYPE1, TYPE2 } from "../steps/step1";
 import { Step2 } from "../steps/step2";
 import { Step3 } from "../steps/step3";
 import { SubmitButton } from "./submit-button";
+import { sendGAEvent } from "@next/third-parties/google";
 import { Modal } from "@/app/components/common/modal";
 
 const convertFileToBase64 = (file: any) => {
@@ -43,6 +44,10 @@ export const Calculator = () => {
 
   const onSuccessSubmit = () => {
     setShowModal(true);
+    sendGAEvent({
+      event: "formSubmitted",
+      value: `${clientName}, ${phone} ${email} ${msg}`,
+    });
     clearForn();
   };
 
@@ -87,6 +92,7 @@ export const Calculator = () => {
     data.append("phone", phone);
     data.append("msg", msg);
     onSuccessSubmit();
+
     const response = await fetch("/api/calculator", {
       method: "post",
       body: data,
